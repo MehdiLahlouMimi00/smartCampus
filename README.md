@@ -1,4 +1,4 @@
-Projet Smart Campus : Plateforms
+# Projet Smart Campus : Plateforms
 - Idrissi Lambarki Fatima Al-Zahra
 - Lamraouna Marwa
 - Lahlou Mimi Mehdi
