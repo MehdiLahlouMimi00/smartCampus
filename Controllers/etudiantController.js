@@ -1,6 +1,6 @@
 const asyncHandler = require("express-async-handler");
 const {pool} = require("../db");
-
+const dotenv = require("dotenv").config();
 
 // Retourner un etudiant a travers un id
 const getEtudiant = asyncHandler( 
@@ -87,9 +87,107 @@ const creerEtudiant = asyncHandler(
 
 )
 
+// Obtenir le solde d'un etudiant
+const getSoldeEtudiant = asyncHandler( 
+
+    async (req, res) => {
+        const id = req.params.id;
+        const query = `SELECT * FROM Etudiant WHERE id=${id};`
+        const result = await pool.query(query);
+
+        res.status(201).json(result);
+    }
+
+)
+
+// Retirer du solde a un etudiant
+const debiterEtudiant  = asyncHandler(
+
+    async (req, res) => {
+
+        const {Token, Montant} = req.body;
+
+        if (!Token) 
+        {
+            throw new Error("Vous avez oublie le token");
+        }
+
+
+
+        const id = req.params.id;
+
+        if (Token == process.env.TOKEN)
+        {
+            // Will be hashed later
+            const selectQuery = `SELECT * FROM Etudiant WHERE id=${id}`;
+            const result = pool.query(selectQuery);
+            
+            const Solde = result.rows.Solde;
+
+            if (Solde < Montant)   // Ajouter les conditions de decouvert le weekend
+            {
+                res.status(400).json({message : "Solde insuffisant"});
+                return;
+            }
+
+            else {
+                const nouveauSolde = Solde - Montant;
+                const query = `UPDATE Etudiant SET Solde = ${nouveauSolde} WHERE id=${id};`
+                pool.query(query);
+                res.status(201);
+            }
+             
+        }
+
+
+    }
+
+)
+
+// Ajouter au solde d'un etudiant 
+const crediterEtudiant  = asyncHandler(
+
+    async (req, res) => {
+
+        const {Token, Montant} = req.body;
+
+        if (!Token) 
+        {
+            throw new Error("Vous avez oublie le token");
+        }
+
+
+
+        const id = req.params.id;
+
+        if (Token == process.env.TOKEN)
+        {
+            // Will be hashed later
+            const selectQuery = `SELECT * FROM Etudiant WHERE id=${id}`;
+            const result = pool.query(selectQuery);
+            
+            const Solde = result.rows.Solde;
+
+            
+            const nouveauSolde = Solde + Montant;
+            const query = `UPDATE Etudiant SET Solde = ${nouveauSolde} WHERE id=${id};`
+            pool.query(query);
+            res.status(201);
+                      
+        }
+
+
+    }
+
+)
+
 
 module.exports = {
     getEtudiant,
     creerEtudiant,
-    getEtudiants
+    getEtudiants,
+    getSoldeEtudiant,
+    debiterEtudiant,
+    crediterEtudiant
+
 }
