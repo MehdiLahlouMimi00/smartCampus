@@ -1,0 +1,108 @@
+.Autres {
+    background-color: #cdd5e0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.Autres .overlap-group-wrapper {
+    background-color: #cdd5e0;
+    height: 1024px;
+    width: 1440px;
+}
+
+.Autres .overlap-group {
+    background-color: #ffffff;
+    height: 1024px;
+    left: 320px;
+    position: relative;
+    width: 800px;
+}
+
+.Autres .continue-une-ligne {
+    height: 97px;
+    left: 333px;
+    object-fit: cover;
+    position: absolute;
+    top: 134px;
+    width: 122px;
+}
+
+.Autres .text-wrapper {
+    color: #000000;
+    font-family: "Inter-Medium", Helvetica;
+    font-size: 40px;
+    font-weight: 500;
+    left: 208px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 61px;
+    white-space: nowrap;
+}
+
+.Autres .overlap {
+    background-color: #04a850;
+    border-radius: 30px;
+    height: 62px;
+    left: 241px;
+    position: absolute;
+    top: 931px;
+    width: 307px;
+}
+
+.Autres .div {
+    color: #ffffff;
+    font-family: "Poppins-LightItalic", Helvetica;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 300;
+    left: 92px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 6px;
+}
+
+.Autres .nom-et-pr-nom-num-ro-wrapper {
+    background-color: #f7f2c966;
+    border-radius: 30px;
+    height: 634px;
+    left: 130px;
+    position: absolute;
+    top: 256px;
+    width: 539px;
+}
+
+.Autres .nom-et-pr-nom-num-ro {
+    color: #000000;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 40px;
+    font-weight: 400;
+    left: 72px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 38px;
+    width: 386px;
+}
+
+.Autres .span {
+    font-family: "Inter-Italic", Helvetica;
+    font-style: italic;
+}
+.Autres .text-wrapper-4 {
+    background-color: #f7f2c900;
+    border: 2px;
+    border-radius: 60px;
+    height: 61px;
+    text-align: center;
+    position: relative;
+    width: 450px;
+    font-size: 29px; 
+    color: #000000; 
+    top: 25px;
+    left: -25px;
+}
+

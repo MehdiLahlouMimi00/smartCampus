@@ -1,0 +1,100 @@
+.Probleme-d-eau {
+    background-color: #cdd5e0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.Probleme-d-eau .overlap-group-wrapper {
+    background-color: #cdd5e0;
+    height: 1024px;
+    width: 1440px;
+}
+
+.Probleme-d-eau .overlap-group {
+    background-color: #ffffff;
+    height: 1024px;
+    left: 320px;
+    position: relative;
+    width: 800px;
+}
+
+.Probleme-d-eau .continue-une-ligne {
+    height: 97px;
+    left: 333px;
+    object-fit: cover;
+    position: absolute;
+    top: 134px;
+    width: 122px;
+}
+
+.Probleme-d-eau .text-wrapper {
+    color: #000000;
+    font-family: "Inter-Medium", Helvetica;
+    font-size: 40px;
+    font-weight: 500;
+    left: 208px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 61px;
+    white-space: nowrap;
+}
+
+.Probleme-d-eau .overlap {
+    background-color: #04a850;
+    border-radius: 30px;
+    height: 62px;
+    left: 241px;
+    position: absolute;
+    top: 931px;
+    width: 307px;
+}
+
+.Probleme-d-eau .div {
+    color: #ffffff;
+    font-family: "Poppins-LightItalic", Helvetica;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 300;
+    left: 92px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 6px;
+}
+
+.Probleme-d-eau .nom-et-pr-nom-num-ro-wrapper {
+    background-color: #f7f2c966;
+    border-radius: 30px;
+    height: 634px;
+    left: 130px;
+    position: absolute;
+    top: 256px;
+    width: 539px;
+}
+
+.Probleme-d-eau .nom-et-pr-nom-num-ro {
+    color: #000000;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 40px;
+    font-weight: 400;
+    left: 72px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 38px;
+    width: 386px;
+}
+
+.Probleme-d-eau .span {
+    font-family: "Inter-Italic", Helvetica;
+    font-style: italic;
+}
+
+.Probleme-d-eau .text-wrapper-2 {
+    font-family: "Inter-BoldItalic", Helvetica;
+    font-style: italic;
+    font-weight: 700;
+}
