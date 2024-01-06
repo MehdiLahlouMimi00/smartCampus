@@ -104,6 +104,21 @@ const getSoldeEtudiant = asyncHandler(
 
 )
 
+const getChambre = asyncHandler (
+    async (req, res) => {
+        let carteid = req.params.carteid;
+
+        const qu = `SELECT * FROM ETUDIANT WHERE CARTEID='${carteid}';`
+        console.log(qu);
+        const result = await pool.query(qu);
+        let chambre = result.rows[0];
+        console.log(result);
+        res.status(201).json({
+            pavillon : chambre.pavillon ,
+            chambre : chambre.numerochambre
+        })
+})
+
 // Retirer du solde a un etudiant
 const debiterEtudiant  = asyncHandler(
 
@@ -229,6 +244,7 @@ const transferSolde = asyncHandler(
   );
 
 
+
 module.exports = {
     getEtudiant,
     creerEtudiant,
@@ -236,6 +252,7 @@ module.exports = {
     getSoldeEtudiant,
     debiterEtudiant,
     crediterEtudiant,
-    transferSolde
+    transferSolde,
+    getChambre
 
 }

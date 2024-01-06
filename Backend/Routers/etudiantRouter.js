@@ -15,7 +15,8 @@ const {
     getSoldeEtudiant,
     debiterEtudiant,
     crediterEtudiant,
-    transferSolde
+    transferSolde,
+    getChambre
 
 } = require("../Controllers/etudiantController");
 
@@ -28,6 +29,8 @@ etudiantRouter.put("/debiter", debiterEtudiant);
 etudiantRouter.put("/crediter", crediterEtudiant);
 etudiantRouter.post("/solde", getSoldeEtudiant);
 etudiantRouter.put("/transfer", transferSolde);
+
+etudiantRouter.get("/chambre/:carteid", getChambre);
 
 
 
